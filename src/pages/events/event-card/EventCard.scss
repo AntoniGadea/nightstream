@@ -1,0 +1,77 @@
+.event-card {
+  width: 80%;
+  min-height: 100px;
+  background-color: #9C9C9C;
+  border-radius: 6px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-description {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-column-gap: 3rem;
+  padding: 1rem 2rem 1.5rem 2rem;
+
+  p {
+    text-align: justify;
+  }
+}
+
+.event-info {
+  display: flex;
+  column-gap: 1rem;
+  width: fit-content;
+  padding: 0.4rem 1rem 0.5rem 10px;
+  border-radius: 0 0 10px 0;
+  background-color: #4C4C4C;
+  box-shadow: rgba(255, 255, 255, 0.15) 3px 3px 3px;
+}
+
+.event-status-active {
+  background-color: #3fe363;
+  width: fit-content;
+  padding: 6px;
+  border-radius: 0 6px 0 10px;
+}
+
+.event-status-inactive {
+  background-color: #DC143C;
+  width: fit-content;
+  padding: 6px;
+  border-radius: 0 6px 0 10px;
+}
+
+.event-name {
+  color: white;
+}
+
+.brand-name {
+  color: white;
+}
+
+.event-hour {
+  color: white;
+}
+
+.card-inscription {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: end;
+
+  button {
+    background-color: #6A0DAD;
+    color: white;
+    font-weight: 500;
+    padding: 0.6rem;
+  }
+  div {
+    background-color: #AC013C;
+    width: fit-content;
+    padding: 0.6rem;
+    color: white;
+  }
+}
