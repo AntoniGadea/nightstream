@@ -1,4 +1,5 @@
 .card {
+  position: relative;
   width: 100%;
   background-color: #232323;
   border-radius: 6px;
@@ -113,4 +114,12 @@
     background-color: #ff9999;
     color: #b00000;
   }
+}
+
+.card-favorite {
+  position: absolute;
+  font-size: 1.2rem;
+  top: 0.5rem;
+  right: 0.8rem;
+  color: yellow;
 }

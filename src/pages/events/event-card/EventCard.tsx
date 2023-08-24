@@ -1,12 +1,15 @@
 import './EventCard.scss';
 import youtubeLogo from '../../../assets/logos/youtube.png';
 import twitchLogo from '../../../assets/logos/twitch.png';
-import {solid} from "@fortawesome/fontawesome-svg-core/import.macro";
+import {regular, solid} from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function EventCard({event}: any) {
     return(
         <div className={'card'}>
+            <div className={'card-favorite'}>
+                <FontAwesomeIcon icon={regular("star")} />
+            </div>
             <div className={'card-header'}>
                 <img src={twitchLogo}/>
                 <img src={youtubeLogo}/>
