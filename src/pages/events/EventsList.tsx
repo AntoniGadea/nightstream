@@ -1,11 +1,13 @@
 import './EventList.scss';
 import logo from '../../assets/logo.png';
-import profileImage from '../../assets/default.png';
 import EventCard from "./event-card/EventCard";
 import mockData from "../../mockData/eventos";
 import React, {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import SearchBar from "../../components/SearchBar/SearchBar";
+import {solid} from "@fortawesome/fontawesome-svg-core/import.macro";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import SIdeMenu from "../../components/SIdeMenu";
 function EventList() {
     const [searchResults, setSearchResults] = useState(mockData);
     const navigate = useNavigate()
@@ -26,6 +28,7 @@ function EventList() {
     return(
         <main>
             <div className={'event-header'}>
+                <FontAwesomeIcon className={'icon'} icon={solid("bars")} />
                 <img className={'logo'} src={logo} alt="nightsream"/>
             </div>
             <div className="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4" role="alert">

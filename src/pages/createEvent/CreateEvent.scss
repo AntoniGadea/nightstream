@@ -6,11 +6,17 @@ main {
 .event-header {
   width: 100%;
   display: flex;
+  column-gap: 3rem;
   align-items: center;
-  padding-inline-start: 10%;
-  padding-inline-end: 10%;
+  padding-inline-start: 5rem;
+  padding-inline-end: 5rem;
   padding-top: 1rem;
   padding-bottom: 2rem;
+
+  @media screen and (max-width: 880px) {
+    padding-inline-start: 1rem;
+    padding-inline-end: 1rem;
+  }
 }
 
 .logo {

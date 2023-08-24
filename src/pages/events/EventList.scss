@@ -8,11 +8,17 @@ main {
 .event-header {
   width: 100%;
   display: flex;
-  justify-content: center;
-  padding-inline-start: 10%;
+  justify-content: start;
+  padding-inline-start: 0;
   padding-inline-end: 10%;
   padding-top: 1rem;
   padding-bottom: 2rem;
+
+  .icon {
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
 }
 
 .logo {
