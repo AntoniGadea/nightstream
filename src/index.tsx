@@ -17,7 +17,7 @@ root.render(
   <React.StrictMode>
       <BrowserRouter>
           <Routes>
-              <Route path="/" element={<SearchPage />} />
+              <Route path="/" element={<EventList />} />
               <Route path="dashboard" element={<App />} />
               <Route path="login" element={<Login2 />} />
               <Route path="events" element={<EventList />} />

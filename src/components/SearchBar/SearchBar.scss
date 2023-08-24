@@ -1,0 +1,21 @@
+.search {
+  width: 100%;
+  background-color: #232323;
+  padding: 0.7rem;
+  border-radius: 0.6rem;
+
+  button {
+    margin-right: 1rem;
+  }
+
+  input {
+    background-color: #232323;
+    color: white;
+    border: none;
+  }
+
+  input:focus{
+    outline: none;
+  }
+
+}

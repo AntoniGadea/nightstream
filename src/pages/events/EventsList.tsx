@@ -3,13 +3,24 @@ import logo from '../../assets/logo.png';
 import profileImage from '../../assets/default.png';
 import EventCard from "./event-card/EventCard";
 import mockData from "../../mockData/eventos";
-import React  from "react";
+import React, {useState} from "react";
 import {useNavigate} from "react-router-dom";
+import SearchBar from "../../components/SearchBar/SearchBar";
 function EventList() {
-    let eventos = mockData;
+    const [searchResults, setSearchResults] = useState(mockData);
     const navigate = useNavigate()
     const createEvent = () => {
         navigate("/create")
+    }
+
+    const search = (event: any) => {
+        const text = event.target.value;
+        if(!event.target.value) {
+            setSearchResults(mockData);
+            return;
+        }
+        const results = mockData.filter( (event) => event.name.includes(text));
+        setSearchResults(results);
     }
 
     return(
@@ -25,15 +36,14 @@ function EventList() {
                 <p className="font-bold">Atención</p>
                 <p>Para poder participar en campañas tienes que rellenar mas datos.</p>
             </div>
-            <div className={'toolbar'}>
-                <button className={'create-event'} onClick={createEvent}>
-                    Crear evento
-                </button>
-            </div>
-            <div className={'card-list'}>
-                { eventos?.map(evento => (
-                    evento && <EventCard event={evento}/>
-                ))}
+
+            <div className={'cards-wrapper'}>
+                <SearchBar func={search}></SearchBar>
+                <div className={'card-list'}>
+                    { searchResults.length && searchResults.map(evento => (
+                        evento && <EventCard event={evento}/>
+                    ))}
+                </div>
             </div>
 
         </main>
