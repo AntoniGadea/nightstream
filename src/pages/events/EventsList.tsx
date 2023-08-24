@@ -27,10 +27,6 @@ function EventList() {
         <main>
             <div className={'event-header'}>
                 <img className={'logo'} src={logo} alt="nightsream"/>
-                <div className={'avatar-container'}>
-                    <img src={profileImage} className={'avatar'}></img>
-                    <span> Streamer</span>
-                </div>
             </div>
             <div className="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4" role="alert">
                 <p className="font-bold">Atención</p>

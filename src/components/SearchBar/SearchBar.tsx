@@ -4,12 +4,20 @@ import {faBars, faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
 function SearchBar({func}: any) {
 
     return (
-        <div className={'search'}>
-            <button>
-                <FontAwesomeIcon icon={faMagnifyingGlass} style={{color: "#ffffff",}} />
+        <div className={'wrapper'}>
+            <div className={'search'}>
+                <button>
+                    <FontAwesomeIcon icon={faMagnifyingGlass} style={{color: "#ffffff",}} />
+                </button>
+                <input onInput={func} placeholder={'Buscar'}/>
+            </div>
+            <button className={'create'}>
+                +
             </button>
-            <input onInput={func} placeholder={'Buscar'}/>
         </div>
+
+
+
     )
 }
 
