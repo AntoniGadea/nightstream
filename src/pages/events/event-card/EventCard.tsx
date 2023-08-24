@@ -30,6 +30,14 @@ function EventCard({event}: any) {
                 <div className={'line'}></div>
                 <div className={'loaded'}></div>
             </div>
+            <div className={'card-actions'}>
+                <button className={'subscribe'}>Participar</button>
+                <button className={'complete'}>
+                    <span>Participando</span>
+                    <FontAwesomeIcon icon={solid("check")} />
+                </button>
+                <button className={'cancel'}>Cancelar</button>
+            </div>
         </div>
     )
 }
