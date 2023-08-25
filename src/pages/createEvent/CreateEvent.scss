@@ -20,7 +20,11 @@ main {
 }
 
 .logo {
-  width: 23rem;
+  width: 16rem;
+
+  @media screen and (min-width: 560px) {
+    width: 23rem;
+  }
 }
 
 .create-form {

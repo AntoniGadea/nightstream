@@ -22,12 +22,16 @@ main {
 }
 
 .logo {
-  width: 23rem;
+  width: 16rem;
+
+  @media screen and (min-width: 560px) {
+    width: 23rem;
+  }
 }
 
 .card-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   column-gap: 3rem;
   margin-top: 1.5rem;
   row-gap: 2rem;
