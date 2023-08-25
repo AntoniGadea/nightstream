@@ -1,7 +1,12 @@
 import './SearchBar.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faBars, faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
+import {useNavigate} from "react-router-dom";
 function SearchBar({func}: any) {
+    const navigate = useNavigate()
+    const next = () => {
+        navigate("/create")
+    }
 
     return (
         <div className={'wrapper'}>
@@ -11,7 +16,7 @@ function SearchBar({func}: any) {
                 </button>
                 <input onInput={func} placeholder={'Buscar'}/>
             </div>
-            <button className={'create'}>
+            <button onClick={next} className={'create'}>
                 +
             </button>
         </div>
