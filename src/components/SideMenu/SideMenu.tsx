@@ -13,10 +13,10 @@ function SideMenu() {
             <div id={'sidenavBackdrop'} onClick={closeNav}></div>
             <div id="mySidenav" className="sidenav">
                 <img src={profile}/>
-                <a href="#">Perfil</a>
-                <a href="#">Configuracion</a>
-                <a href="#">Perticipaciones</a>
-                <a href="#">Contact</a>
+                <a href="#">Eventos</a>
+                <a href="#">Configuración</a>
+                <a href="#">Estadistícas</a>
+                <a href="#">Contacto</a>
             </div>
         </div>
 
