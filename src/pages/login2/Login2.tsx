@@ -1,3 +1,4 @@
+import './Login.scss';
 import logo from "../../assets/logo.png";
 import {useNavigate} from "react-router-dom";
 
@@ -13,8 +14,8 @@ function Login2() {
             <div className={'logo-header'}>
                 <img className={'logo'} src={logo}/>
             </div>
-            <div className="min-h-screen flex items-center justify-center">
-                <div className="max-w-md w-full p-6 bg-white rounded-lg shadow-lg">
+            <div className="min-h-100 flex items-center justify-center">
+                <div id={'loginConainter'} className="max-w-md w-full p-6 rounded-lg shadow-lg">
                     <h1 className="text-2xl font-semibold text-center text-gray-500 mt-8 mb-6">Iniciar sesión</h1>
                     <form>
                         <div className="mb-6">
