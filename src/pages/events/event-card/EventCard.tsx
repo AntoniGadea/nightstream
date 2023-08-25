@@ -3,12 +3,20 @@ import youtubeLogo from '../../../assets/logos/youtube.png';
 import twitchLogo from '../../../assets/logos/twitch.png';
 import {regular, solid} from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {useRef} from "react";
 
 function EventCard({event}: any) {
+    let favourite: any = useRef(null);
+    function saveEvent() {
+        if( favourite.current)
+        favourite.current.classList.toggle('selected')
+    }
+
     return(
         <div className={'card'}>
-            <div className={'card-favorite'}>
-                <FontAwesomeIcon icon={regular("star")} />
+            <div ref={favourite} className={'card-favorite'} onClick={saveEvent}>
+                <FontAwesomeIcon  className={'unsaved'} icon={regular("star")} />
+                <FontAwesomeIcon className={'saved'} icon={solid("star")} />
             </div>
             <div className={'card-header'}>
                 <img src={twitchLogo}/>

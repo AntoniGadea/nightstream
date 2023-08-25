@@ -122,4 +122,18 @@
   top: 0.5rem;
   right: 0.8rem;
   color: yellow;
+  .saved {
+    display: none;
+  }
 }
+
+.card-favorite.selected {
+  .unsaved {
+    display: none;
+  }
+  .saved {
+    display: block;
+  }
+}
+
+
