@@ -134,13 +134,14 @@ function CreateEvent() {
                         </button>
                     </div>
                     <div className="money case-container">
-                        <p>Under construction.</p>
+                       <input/>
                     </div>
                     <div className="items case-container">
-                        <p>Under construction.</p>
+                        <textarea>Unas zapas to flama</textarea>
                     </div>
                     <div className="mix case-container">
-                        <p>Under construction.</p>
+                        <input/>
+                        <textarea>Unas zapas to flama</textarea>
                     </div>
                 </div>
             </div>
