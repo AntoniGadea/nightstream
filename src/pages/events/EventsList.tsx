@@ -7,7 +7,7 @@ import {useNavigate} from "react-router-dom";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import {solid} from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import SIdeMenu from "../../components/SIdeMenu";
+import SideMenu from "../../components/SideMenu/SideMenu";
 function EventList() {
     const [searchResults, setSearchResults] = useState(mockData);
     const navigate = useNavigate()
@@ -25,10 +25,17 @@ function EventList() {
         setSearchResults(results);
     }
 
+    function openNav() {
+       let  navSize = window.innerWidth < 900 ? '60%' : '30%';
+        document.getElementById("mySidenav")!.style.width = navSize;
+        document.getElementById("sidenavBackdrop")!.style.width = "100%";
+    }
+
     return(
         <main>
+            <SideMenu></SideMenu>
             <div className={'event-header'}>
-                <FontAwesomeIcon className={'icon'} icon={solid("bars")} />
+                <FontAwesomeIcon onClick={openNav} className={'icon'} icon={solid("bars")} />
                 <img className={'logo'} src={logo} alt="nightsream"/>
             </div>
             <div className="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4" role="alert">
