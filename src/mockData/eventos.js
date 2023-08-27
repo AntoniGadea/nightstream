@@ -1,5 +1,12 @@
 export default [
     {
+        "name": "Aventura en Mundos Fantásticos",
+        "date": "Sábado, 5 de noviembre",
+        "description": "Exploradores de mundos mágicos, ¡esta es para ustedes! Sumérgete en emocionantes juegos de rol y vive historias épicas en un evento lleno de fantasía.",
+        "active": true,
+        "status": "owner"
+    },
+    {
         "name": "Festival de Tecnología HyperWave",
         "date": "Sábado, 12 de septiembre",
         "description": "Únete al Festival de Tecnología HyperWave, patrocinado por la marca líder en innovación. Explora los avances tecnológicos más emocionantes y descubre cómo la tecnología transforma nuestras vidas.",
@@ -24,13 +31,6 @@ export default [
         "name": "Torneo de Acción Total",
         "date": "Sábado, 25 de septiembre",
         "description": "Buscamos streamers apasionados por juegos de acción para competir en un emocionante torneo. ¡Demuestra tu destreza en batallas intensas y gana premios increíbles!",
-        "active": true,
-        "status": ""
-    },
-    {
-        "name": "Aventura en Mundos Fantásticos",
-        "date": "Sábado, 5 de noviembre",
-        "description": "Exploradores de mundos mágicos, ¡esta es para ustedes! Sumérgete en emocionantes juegos de rol y vive historias épicas en un evento lleno de fantasía.",
         "active": true,
         "status": ""
     }

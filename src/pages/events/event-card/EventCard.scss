@@ -7,6 +7,14 @@
   cursor: pointer;
 }
 
+.card.owner {
+  border: 2px solid #00cc66; /* Color de borde que destaque */
+
+  .card-favorite {
+    display: none;
+  }
+}
+
 .card-header {
   display: flex;
   flex-direction: row;
@@ -38,6 +46,7 @@
   color: white;
   font-weight: 300;
   font-size: 1rem;
+  min-height: 120px;
 }
 
 .card-loader {

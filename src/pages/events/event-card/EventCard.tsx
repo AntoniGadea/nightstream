@@ -18,6 +18,7 @@ function EventCard({event}: any) {
             </button>
             <button onClick={cancelEvent} className={'cancel'}>Cancelar</button>
         </div>,
+        'owner':  <button className={'edit'}>Editar</button>
     };
 
     let favourite: any = useRef(null);
@@ -38,8 +39,8 @@ function EventCard({event}: any) {
    }
 
     return(
-        <div className={'card'}>
-            <div ref={favourite} className={'card-favorite'} onClick={saveEvent}>
+        <div className={`card ${event.status === 'owner' ? 'owner' : ''}`}>
+        <div ref={favourite} className={'card-favorite'} onClick={saveEvent}>
                 <FontAwesomeIcon  className={'unsaved'} icon={regular("star")} />
                 <FontAwesomeIcon className={'saved'} icon={solid("star")} />
             </div>
