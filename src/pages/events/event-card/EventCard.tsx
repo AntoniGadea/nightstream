@@ -6,6 +6,7 @@ import userLogo2 from '../../../assets/logos/profile2.webp';
 import {regular, solid} from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {useRef, useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 function EventCard({event}: any) {
     const BUTTONS: any = {
@@ -18,8 +19,16 @@ function EventCard({event}: any) {
             </button>
             <button onClick={cancelEvent} className={'cancel'}>Cancelar</button>
         </div>,
-        'owner':  <button className={'edit'}>Editar</button>
+        'owner': <div>
+            <button className={'edit'}>Editar</button>
+            <button onClick={next} className={'subscribe'}>Ver participantes</button>
+        </div>
     };
+
+    const navigate = useNavigate()
+    function next () {
+        navigate("/event/1")
+    }
 
     let favourite: any = useRef(null);
     let [button, setButton]: any = useState(BUTTONS[event.status]);

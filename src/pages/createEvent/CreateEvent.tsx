@@ -114,7 +114,7 @@ function CreateEvent() {
                     </div>
                     <div className="mb-6">
                         <button className={'create-event'}> Crear </button>
-                        <button className={'cancel'} onClick={back}>Cancelar</button>
+                        <button className={'cancel mr-2'} onClick={back}>Cancelar</button>
                         <button className={'primary'} onClick={back}>Guardar borrador</button>
                     </div>
                 </div>
@@ -134,14 +134,18 @@ function CreateEvent() {
                         </button>
                     </div>
                     <div className="money case-container">
+                        <label>Valor total</label>
                        <input/>
                     </div>
                     <div className="items case-container">
-                        <textarea>Unas zapas to flama</textarea>
+                        <label>Descripción del/los producto/s</label>
+                        <textarea>4 cajas de nuestro producto...</textarea>
                     </div>
                     <div className="mix case-container">
+                        <label>Valor total</label>
                         <input/>
-                        <textarea>Unas zapas to flama</textarea>
+                        <label>Descripción del/los producto/s</label>
+                        <textarea>4 cajas de nuestro producto...</textarea>
                     </div>
                 </div>
             </div>
