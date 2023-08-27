@@ -31,6 +31,20 @@ function EventList() {
         document.getElementById("sidenavBackdrop")!.style.width = "100%";
     }
 
+    function myEvents() {
+        const results = mockData.filter( (event) => event.status === 'owner');
+        setSearchResults(results);
+    }
+
+    function reset() {
+        setSearchResults(mockData);
+    }
+
+    function  otherEvents() {
+        const results = mockData.filter( (event) => event.status !== 'owner');
+        setSearchResults(results);
+    }
+
     return(
         <main>
             <SideMenu></SideMenu>
@@ -44,6 +58,13 @@ function EventList() {
             </div>
 
             <div className={'cards-wrapper'}>
+                <div className={'filters'}>
+                    <span>Filtors:</span>
+                    <p onClick={reset}>Todos</p>
+                    <p onClick={myEvents}>Mis eventos</p>
+                    <p>Favoritos</p>
+                    <p onClick={otherEvents}>Eventos de otras marcas</p>
+                </div>
                 <SearchBar func={search}></SearchBar>
                 <div className={'card-list'}>
                     { searchResults.length && searchResults.map(evento => (
