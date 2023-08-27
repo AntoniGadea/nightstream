@@ -1,16 +1,41 @@
 import './EventCard.scss';
 import youtubeLogo from '../../../assets/logos/youtube.png';
 import twitchLogo from '../../../assets/logos/twitch.png';
+import userLogo1 from '../../../assets/logos/profile1.webp';
+import userLogo2 from '../../../assets/logos/profile2.webp';
 import {regular, solid} from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {useRef} from "react";
+import {useRef, useState} from "react";
 
 function EventCard({event}: any) {
+    const BUTTONS: any = {
+        '': <button onClick={subscribe} className={'subscribe'}>Participar</button>,
+        'pending': <button className={'pending'}>Pendiente de aprobación</button>,
+        'subscribed':  <div>
+            <button className={'complete'}>
+                <span>Participando</span>
+                <FontAwesomeIcon icon={solid("check")} />
+            </button>
+            <button onClick={cancelEvent} className={'cancel'}>Cancelar</button>
+        </div>,
+    };
+
     let favourite: any = useRef(null);
+    let [button, setButton]: any = useState(BUTTONS[event.status]);
+
+
     function saveEvent() {
         if( favourite.current)
         favourite.current.classList.toggle('selected')
     }
+
+    function cancelEvent() {
+        setButton(BUTTONS['']);
+    }
+
+   function subscribe() {
+       setButton(BUTTONS['pending']);
+   }
 
     return(
         <div className={'card'}>
@@ -34,7 +59,7 @@ function EventCard({event}: any) {
                     <span>{event.date}</span>
                 </div>
                 <div className={'right'}>
-                    <span>2/4</span>
+                    <span>4/8</span>
                 </div>
             </div>
             <div className={'card-loader'}>
@@ -42,12 +67,12 @@ function EventCard({event}: any) {
                 <div className={'loaded'}></div>
             </div>
             <div className={'card-actions'}>
-                <button className={'subscribe'}>Participar</button>
-                <button className={'complete'}>
-                    <span>Participando</span>
-                    <FontAwesomeIcon icon={solid("check")} />
-                </button>
-                <button className={'cancel'}>Cancelar</button>
+                {button}
+                <div className={'users'}>
+                    <img src={userLogo1}/>
+                    <img src={userLogo2}/>
+                    <span>2</span>
+                </div>
             </div>
         </div>
     )
