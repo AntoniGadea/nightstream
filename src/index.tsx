@@ -8,6 +8,7 @@ import EventList from "./pages/events/EventsList";
 import CreateEvent from "./pages/createEvent/CreateEvent";
 import Login2 from "./pages/login2/Login2";
 import ManageEvent from "./pages/ManageEvent/ManageEvent";
+import Signup from "./pages/sign-up/SignUp";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -19,6 +20,7 @@ root.render(
               <Route path="/" element={<EventList />} />
               <Route path="dashboard" element={<App />} />
               <Route path="login" element={<Login2 />} />
+              <Route path="signup" element={<Signup />} />
               <Route path="events" element={<EventList />} />
               <Route path="event/1" element={<ManageEvent />} />
               <Route path="create" element={<CreateEvent />} />
