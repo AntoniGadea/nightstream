@@ -1,24 +1,32 @@
-import './SearchBar.scss';
+import search from './SearchBar.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
-import {useNavigate} from "react-router-dom";
+import {useRouter} from "next/navigation";
+import {useSelector} from "react-redux";
+
+
 function SearchBar({func}: any) {
-    const navigate = useNavigate()
+    const role = useSelector( (state: any) => state.auth.role);
+    const router = useRouter();
     const next = () => {
-        navigate("/create")
+        router.push('/event');
     }
 
     return (
-        <div className={'wrapper'}>
-            <div className={'search'}>
+        <div className={search.wrapper}>
+            <div className={search.search}>
                 <button>
                     <FontAwesomeIcon icon={faMagnifyingGlass} style={{color: "#ffffff",}} />
                 </button>
                 <input onInput={func} placeholder={'Buscar'}/>
             </div>
-            <button onClick={next} className={'create'}>
-                +
-            </button>
+            { role === 'business' ?
+                (<button onClick={next} className={search.create}>
+                    +
+                </button>)
+                : ''
+            }
+
         </div>
 
 

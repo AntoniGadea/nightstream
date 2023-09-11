@@ -1,5 +1,7 @@
-import './SideMenu.scss';
-import profile from '../../assets/default.png'
+import './SideMenu.css';
+import profile from '../../../public/default.png';
+import Image from "next/image";
+
 function SideMenu() {
 
     function closeNav() {
@@ -12,10 +14,14 @@ function SideMenu() {
         <div className={'wrapper'}>
             <div id={'sidenavBackdrop'} onClick={closeNav}></div>
             <div id="mySidenav" className="sidenav">
-                <img src={profile}/>
-                <a href="/events">Eventos</a>
-                <a href="#">Configuración</a>
-                <a href="#">Estadistícas</a>
+               <Image src={profile}
+                      alt={'profile'}
+                      style={{
+                          width: '120px',
+                          height: 'auto',
+                      }}/>
+                <a href="/">Eventos</a>
+                <a href="#">Mi perfil</a>
                 <a href="#">Contacto</a>
             </div>
         </div>

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/nightstream.iml" filepath="$PROJECT_DIR$/.idea/nightstream.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/nightstream-front.iml" filepath="$PROJECT_DIR$/.idea/nightstream-front.iml" />
     </modules>
   </component>
 </project>

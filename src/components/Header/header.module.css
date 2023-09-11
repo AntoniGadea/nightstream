@@ -1,0 +1,31 @@
+.header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: var(--main-background-color);
+    padding: 50px;
+
+    @media screen and (max-width: 600px) {
+        padding: 30px;
+    }
+}
+
+.icon {
+    font-size: 35px;
+    margin-right: 50px;
+    cursor: pointer;
+
+    @media screen and (max-width: 600px) {
+        margin-right: 20px;
+    }
+}
+
+.logout {
+    background-color: #f99;
+    color: #b00000;
+    border: 1px solid;
+    border-radius: 6px;
+    position: absolute;
+    right: 100px;
+}
