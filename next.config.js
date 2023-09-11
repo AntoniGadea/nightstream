@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     env: {
-        login: "http://localhost:8080",
-        events: "http://localhost:8081"
+        login: "https://micro-login-dot-nightstream-backend.oa.r.appspot.com/",
+        events: "https://micro-login-dot-nightstream-backend.oa.r.appspot.com/"
     }
 }
 
