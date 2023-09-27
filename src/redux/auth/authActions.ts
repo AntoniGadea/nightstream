@@ -6,12 +6,13 @@ export const postLogin = createAsyncThunk(
     'auth/loginRequest',
     async (formData: LoginData, { rejectWithValue }) => {
         try {
-            const response = await fetch(`${process.env.login}/login`, {
+            const response = await fetch(`http://localhost:8080/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(formData),
+                credentials: 'include',
             });
 
             if (!response.ok) {
@@ -62,7 +63,8 @@ export const getLogout = createAsyncThunk(
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `${token}`,
-                }
+                },
+                credentials: 'include',
             });
 
             if (!response.ok) {
